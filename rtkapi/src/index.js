@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux"
 import {store} from "./app/store"
+// import { ApiProvider } from '@reduxjs/toolkit/dist/query/react';
+import Products from './Products';
+import CustomPagination from './CustomPagination';
+import ProductsList from './ProductsList';
 
 
 
@@ -13,11 +17,12 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       
-      <App />
-    
+      <CustomPagination/> 
+  {/* <App/> */}
+ 
       
     </Provider>
-   
+    
   </React.StrictMode>
 );
 

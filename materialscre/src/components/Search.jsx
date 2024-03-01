@@ -69,16 +69,28 @@ const Search = () => {
           </Search1>
           </Card> */}
 
-            <Card sx={{  height: '100%', width:'100%',overflow: 'auto', position: 'relative',borderRadius:2,boxShadow:3,backgroundColor:'#f2eeeb' }}> 
-            <Box display="flex" flexDirection="row" alignItems="center"sx={{marginTop:2}}>
-    <Box flexGrow={1}>
-        <Button startIcon={<DirectionsBoatFilledIcon />} endIcon={<SearchIcon />} sx={{ marginLeft:2,borderRadius: 2, backgroundColor: "#e2dcd2", color:"#78776f",paddingTop:1 }}>
+            <Card sx={{  height: '100%', width:{
+                lg:"100%",
+                xs:"100%"
+            },overflow: 'auto', position: 'relative',borderRadius:2,boxShadow:3,backgroundColor:'#f2eeeb' }}> 
+            <Box display="flex"  alignItems="center"sx={{marginTop:2,flexDirection:{
+                lg:"row",
+                xs:"column"
+            }}}>
+    <Box flexGrow={1} sx={{}}>
+        <Button startIcon={<DirectionsBoatFilledIcon />} endIcon={<SearchIcon />} sx={{ marginLeft:2,borderRadius: 2, backgroundColor: "#e2dcd2", color:"#78776f",paddingTop:{
+            lg:1
+        } }}>
             My Responsibilities
         </Button>
     </Box>
-
+        
     <Box flexGrow={2}>
-        <Button endIcon={<KeyboardArrowDownIcon />} sx={{ borderRadius: 2,backgroundColor: "#e2dcd2", color:"#78776f", paddingTop: 1 }}>
+        <Button endIcon={<KeyboardArrowDownIcon />} sx={{ borderRadius: 2,backgroundColor: "#e2dcd2", color:"#78776f", paddingTop: 1,marginTop:{
+            xs:1
+        } ,paddingLeft:{
+            xs:0
+        }}}>
                             po                   
         </Button>
     </Box>
@@ -91,7 +103,10 @@ const Search = () => {
             </Box>
 <br />
 {/* <Box  > */}
-<Box display="flex">
+<Box display="flex" sx={{flexDirection:{
+    lg:"row"
+    ,xs:"column"
+}}}>
     {/* Left Section */}
     <Box flexGrow={1} padding={2}>
         {/* Copy ID Section */}

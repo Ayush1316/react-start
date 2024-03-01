@@ -10,7 +10,7 @@ const Content = () => {
   return (
       
             <Grid container spacing={2} sx={{}}>
-            <Grid items xs={12} sx={{}}> 
+            <Grid items lg={12} xs={12} sx={{}}> 
             <Card sx={{display:'flex',marginLeft:4,marginTop:4,marginBottom:2,marginRight:2,borderRadius:2,paddingTop:2,position: 'relative',boxShadow:1,backgroundColor:"#eff1f0"}}>
                <CardContent>
                 <Box sx={{flexDirection:"row",display:'flex'}}>

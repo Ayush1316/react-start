@@ -20,10 +20,15 @@ import HorizontalScrollCard from './HorizontalScrollCard';
 const MainComponent = () => {
   return (
     <Grid container spacing={2} sx={{backgroundColor:''}}>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                     <Card sx={{ backgroundColor: "#e8eced", overflow: 'auto', position: 'relative',borderRadius:2,boxShadow:3}}>
                         <CardContent>
-                        <Box display="flex" flexDirection="row" alignItems="center"sx={{marginTop:2}}>
+                        <Box display="flex" flexDirection="row" alignItems="center"sx={{marginTop:2,flexDirection:{
+                            xs:"column",
+                            sm:"column",
+                            lg:"row",
+                            md:"row"
+                        }}}>
                             {/* <Box display="flex"> */}
                                 {/* <Box flexGrow={1}> */}
                                 <Avatar sx={{ bgcolor: deepOrange[500] }}>
@@ -36,8 +41,15 @@ const MainComponent = () => {
                             <Typography variant="h8" gutterBottom sx={{paddingLeft:4,whiteSpace:'nowrap',fontWeight: 'bold'}} >
                                 HOTEL/TECH WORK SQUAD GFR
                             </Typography>
-                            <CardActions sx={{paddingLeft:40}}>
-                                <Stack direction="row" spacing={2} >
+                            <CardActions sx={{flexDirection:{
+                            xs:"column",
+                            sm:"column",
+                            lg:"row",
+                            md:"row"
+                        },paddingLeft:{
+                            xs:0,lg:40
+                        }}}>
+                                <Stack direction="row"  spacing={2} >
                                     <Button variant="contained" startIcon={<DirectionsBoatFilledIcon/>} style={{backgroundColor:'#86e5ff',color:'#388bad'}}>
                                             Loren ipsum
                                     </Button>
@@ -46,8 +58,18 @@ const MainComponent = () => {
                             {/* </Box> */}
                         </Box>
                         <br />
-                        <Box display="flex" flexDirection="row" alignItems="center" sx={{borderRadius:0,width:'100%'}}>
-                            <Box flexGrow={1}>
+                        <Box display="flex" flexDirection="row" alignItems="center" sx={{borderRadius:0,width:'100%',flexDirection:{
+                            xs:"column",
+                            sm:"column",
+                            lg:"row",
+                            md:"row"
+                        }}}>
+                            <Box flexGrow={1} sx={{
+                                paddingRight:{
+                                    xs:22,
+                                    lg:2
+                                }
+                            }}>
                                 <Typography variant='subtitle'>
                                     Date Requested
                                 </Typography> 
@@ -56,7 +78,12 @@ const MainComponent = () => {
                                 </Typography>
                             </Box>
 
-                            <Box flexGrow={2}>
+                            <Box flexGrow={2} sx={{
+                                paddingRight:{
+                                    xs:26,
+                                    lg:2
+                                }
+                            }}>
                                 <Typography variant='subtitle'>
                                     Type
                                 </Typography> 

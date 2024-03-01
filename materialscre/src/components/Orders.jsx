@@ -76,7 +76,7 @@ const Orders = () => {
                         <Chip label="8" sx={{marginLeft:1}} />
                     </Typography>
             {order.map((orderItem) => (
-                <Grid item xs={12} key={orderItem.id}>
+                <Grid item xs={12} lg={12} key={orderItem.id}>
                     <Card sx={{ backgroundColor: orderItem.color, height: '100%', overflow: 'auto', position: 'relative',borderRadius:2,boxShadow:3,':hover': {
           borderColor:'black',border:2
           

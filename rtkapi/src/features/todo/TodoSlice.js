@@ -1,7 +1,7 @@
 import {createAsyncThunk,createSlice} from "@reduxjs/toolkit"
 
 export const getAllData=createAsyncThunk("todos",async()=>{
-    const response =await fetch("https://jsonplaceholder.typicode.com/todos")
+    const response =await fetch("https://dummyjson.com/products")
     const result = response.json()
     return result
 })
